@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main>
+    <section id="card">
+      <div id="front">
+        <div id="circles"><div id="filled"></div><div id="outline"></div></div>
+        <div id="number">0000 0000 0000 0000</div>
+        <div id="nameDate">
+          <span id="name">Jane Appleseed</span>
+          <span id="date"><span id="cardMonth">00</span>/<span id="cardYear">00</span></span>
+        </div>
+      </div>
+      <div id="back">
+        <div id="cvc">
+          000
+        </div>
+      </div>
+    </section>
+    <section id="completed">
+      <img src="./images/icon-complete.svg" alt="complete">
+      <h1>THANK YOU!</h1>
+      <h3>We've added your card details</h3>
+      <button>Continue</button>
+    </section>
+    <form action="#" method="post">
+      <h2>CARDHOLDER NAME</h2>
+      <input type="text" name="name" id="fullName" placeholder="e.g. Jane Appleseed">
+      <p id="error1" class="error"></p>
+      <h2>CARD NUMBER</h2>
+      <input type="text" name="cardNumber" maxlength="19" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+      <p id="error2" class="error"></p>
+      <div id="data">
+        <div id="expDate">
+          <h2>Exp. Date (MM/YY)</h2>
+          <input type="number" name="month" id="month" placeholder="MM">
+          <input type="number" name="year" id="year" placeholder="YY">
+          <div id="errorDate">
+            <p id="error3" class="error"></p>
+            <p id="error4" class="error"></p>
+          </div>
+        </div>
+        <div id="cvcData">
+          <h2>CVC</h2>
+          <input type="number" name="cvcNumber" id="cvcNumber" placeholder="e.g. 123">
+          <p id="error5" class="error"></p>
+        </div>
+      </div>
+      <button type="button" id="submit">Confirm</button>
+    </form>
+  </main>
+  <script src="./dist/app.js"></script>
+</body>
+</html>
